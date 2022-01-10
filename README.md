@@ -47,6 +47,12 @@ val collectionItems = source.collectionItems
 val promoItemDistanceTradeLink: String = promoItem.distanceTradeLinks?.appLink
     ?: String.EMPTY
 ```
+- Сочетание операторов `?.` и `?:` (гусь и Элвис) в многострочных выражениях пишем на новых строках (а в сложных случаях лучше заменить на `if/else`):
+```kotlin
+child
+    ?.let { it.doSomething() }
+    ?: parent.doSomething()
+```
 - При описании переменной с делегатом, не помещающимися на одной строке, оставлять описание с открывающейся фигурной скобкой на одной строке, перенося остальное выражение на следующую строку:
 ```kotlin
 private val promoItem: MarkPromoItem by lazy {
