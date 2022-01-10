@@ -59,30 +59,18 @@ private val promoItem: MarkPromoItem by lazy {
 - Позволительно использовать функцию с одним выражением только в том случае, если она помещается в одну строку.
 
 ## Именованные аргументы
-- Если аргументов больше 3х, то следует их именовать.
+- Если по аргументу не понятно, что это за параметр, то следует сделать его именованным.
 ```kotlin
 runOperation(
     method = operation::run,
-    consumer = consumer,
-    errorHandler = errorHandler,
-    tag = tag,
-    cache = cache,
-    cacheMode = cacheMode
+    consumer,
+    errorHandler,
+    tag,
+    cacheSize = 3,
+    cacheMode
 )
 ```
 - Если именованные аргументы не помещаются на одной строке, то следует переносить каждый аргумент на новую строку (как в примере выше).
-- Если аргументов 3 или меньше, то необязательно именовать все аргументы. При этом именованные аргументы должны идти в конце. 
-```kotlin
-val date: Date = ..
-savePaymentData(date, cost = 100)
-```
-- Если функция принимает несколько аргументов одного и то же типа, 
-то стоит именовать эти аргументы при вызове данной функции, чтобы случайно не перепутать их местами.
-```kotlin
-val startDate: Date = ..
-val endDate: Date = ..
-compareDates(startDate = startDate, endDate = endDate)
-```
 - Именуем все лямбды, принимаемые функцией в качестве аргументов (кроме случаев когда лямбда вынесена за круглые скобки),
 чтобы во время чтения кода было понятно назначение и ответственность каждой лямбды.  
 ```kotlin
@@ -95,14 +83,13 @@ editText.addTextChangedListener(
     }
 )
 ```
-- Именовать аргументы примитивных типов.   
-При этом если аргумент один, и из контекста вызова функции понятно для чего он нужен, то можно его не именовать.
+- Полезно именовать аргументы одинаковых типов, чтобы случайно не перепутать их местами.
 ```kotlin
-calculateSquare(x = 6, y = 19)
-getCurrentUser(skipCache = false)
-setProgressBarVisible(true)
+val startDate: Date = ..
+val endDate: Date = ..
+compareDates(startDate = startDate, endDate = endDate)
 ```
-- Именовать аргумент при передаче `null`.
+- Полезно именовать аргумент при передаче `null`.
 ```kotlin
 setAdditionalArguments(arguments = null)
 ```
