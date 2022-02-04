@@ -44,7 +44,7 @@ val collectionItems = source.collectionItems
 ```
 - Элвис оператор `?:` при разрыве выражения также переносится на новую строку:
 ```kotlin
-val promoItemDistanceTradeLink: String = promoItem.distanceTradeLinks?.appLink
+val promoItemDistanceTradeLink: String = promoItem.distanceTradeLinks.appLinkNullable
     ?: String.EMPTY
 ```
 - Сочетание операторов `?.` и `?:` (гусь и Элвис) в многострочных выражениях пишем на новых строках (а в сложных случаях лучше заменить на `if/else`):
