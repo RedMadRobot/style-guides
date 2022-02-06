@@ -42,7 +42,7 @@ val collectionItems = source.collectionItems
     ?.dropLast(10)
     ?.sortedBy { it.progress }
 ```
-- Элвис оператор `?:` при разрыве выражения также переносится на новую строку:
+- Элвис оператор `?:` в многострочном выражении также переносится на новую строку:
 ```kotlin
 val promoItemDistanceTradeLink: String = promoItem.distanceTradeLinks?.appLink
     ?: String.EMPTY
