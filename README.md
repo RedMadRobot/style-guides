@@ -46,6 +46,24 @@ val collectionItems = source.collectionItems
 ```kotlin
 val promoItemDistanceTradeLink: String = promoItem.distanceTradeLinks?.appLink
     ?: String.EMPTY
+
+promoItem.distanceTradeLinks?.let { setLink(it) }
+    ?: setLink(String.EMPTY)
+```
+- Если перед элвис оператором `?:` многострочная лямбда, желательно перенести также и лямбду:
+```kotlin
+// Good
+promoItem.distanceTradeLinks
+    ?.let { appLink ->
+        setLink(appLink) 
+    }
+    ?: setLink(String.EMPTY)
+    
+// Not recommended
+promoItem.distanceTradeLinks?.let { appLink ->
+    setLink(appLink) 
+}
+    ?: setLink(String.EMPTY)
 ```
 - При описании переменной с делегатом, не помещающимися на одной строке, оставлять описание с открывающейся фигурной скобкой на одной строке, перенося остальное выражение на следующую строку:
 ```kotlin
