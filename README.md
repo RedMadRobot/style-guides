@@ -44,26 +44,28 @@ val collectionItems = source.collectionItems
 ```
 - Элвис оператор `?:` в многострочном выражении также переносится на новую строку:
 ```kotlin
-val promoItemDistanceTradeLink: String = promoItem.distanceTradeLinks?.appLink
-    ?: String.EMPTY
+val throwableMessage: String = throwable?.message
+    ?: DEFAULT_ERROR_MESSAGE
 
-promoItem.distanceTradeLinks?.let { setLink(it) }
-    ?: setLink(String.EMPTY)
+throwable.message?.let { showError(it) }
+    ?: showError(DEFAULT_ERROR_MESSAGE)
 ```
 - Если перед элвис оператором `?:` многострочная лямбда, желательно перенести также и лямбду:
 ```kotlin
 // Good
-promoItem.distanceTradeLinks
-    ?.let { appLink ->
-        setLink(appLink) 
+throwable.message
+    ?.let { message ->
+        ...
+        showError(message)
     }
-    ?: setLink(String.EMPTY)
+    ?: showError(DEFAULT_ERROR_MESSAGE)
     
 // Not recommended
-promoItem.distanceTradeLinks?.let { appLink ->
-    setLink(appLink) 
+throwable.message?.let { message ->
+    ...
+    showError(message)
 }
-    ?: setLink(String.EMPTY)
+    ?: showError(DEFAULT_ERROR_MESSAGE)
 ```
 - При описании переменной с делегатом, не помещающимися на одной строке, оставлять описание с открывающейся фигурной скобкой на одной строке, перенося остальное выражение на следующую строку:
 ```kotlin
