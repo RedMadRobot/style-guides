@@ -1,0 +1,37 @@
+name: Добавление правила
+description: Добавление нового правила в style guide
+labels: ["discussion", "add"]
+body:
+  - type: input
+    id: rule_title
+    attributes:
+      label: Новое правило
+      description: Заголовок нового правила
+      placeholder: ex. Форматирование лямбда-выражений
+    validations:
+      required: true
+
+  - type: textarea
+    id: rule_body
+    attributes:
+      label: Описание правила
+      description: Развернутое описание правила
+      placeholder: ex. При написании лямбда-выражения более чем в одну строку всегда использовать именованный аргумент, вместо `it`
+    validations:
+      required: false
+      
+  - type: textarea
+    id: rule_code_ex_before
+    attributes:
+      label: Пример плохого кода
+      render: Kotlin
+    validations:
+      required: false
+
+  - type: textarea
+    id: rule_code_ex_after
+    attributes:
+      label: Пример хорошего кода
+      render: Kotlin
+    validations:
+      required: true

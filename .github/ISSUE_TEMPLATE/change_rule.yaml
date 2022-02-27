@@ -1,0 +1,45 @@
+name: Изменение правила
+description: Изменение существующего правила из style guide
+labels: ["discussion", "change"]
+body:
+  - type: input
+    id: rule_link
+    attributes:
+      label: Ссылка на существующее правило
+    validations:
+      required: true
+
+  - type: dropdown
+    id: rule_type
+    attributes:
+      label: Тип
+      options:
+        - Удаление
+        - Изменение
+    validations:
+      required: true
+
+  - type: textarea
+    id: rule_motivation_and_changes
+    attributes:
+      label: Мотивация и список изменений
+      description: Почему и как хочется изменить правило?
+      placeholder: ex. С приходом Compose лямбды теперь передаём в параметрах чаще и необходимость явно прописывать invoke, как мне кажется, только усложняет чтение кода.
+    validations:
+      required: true
+      
+  - type: textarea
+    id: rule_code_ex_before
+    attributes:
+      label: Пример плохого кода
+      render: Kotlin
+    validations:
+      required: false
+
+  - type: textarea
+    id: rule_code_ex_after
+    attributes:
+      label: Пример хорошего кода
+      render: Kotlin
+    validations:
+      required: true
