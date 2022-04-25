@@ -208,18 +208,18 @@ data class UserInfo (
 ```kotlin
 return if (condition) foo() else bar()
 ```
-- В операторе `when` ветки, состоящие более чем из одной строки, обрамлять фигурными скобками и отделять от других case-веток пустыми строками сверху и снизу.
+- В операторе `when` ветки, состоящие более чем из одной строки, обрамлять фигурными скобками:
 ```kotlin
-when (feed.type) {
-    FeedType.PERSONAL -> startPersonalFeedScreen()
-    
-    FeedType.SUM -> {
-        showSumLayout()
-        hideProgressBar()
+when (whenType) {
+    WhenType.ONE -> someMethod()
+    WhenType.MANY -> {
+        someMethod()
+        anotherMethod()
     }
-    
-    FeedType.CARD -> startCardFeedScreen()
-    else -> showError() 
+    WhenType.CHAIN -> {
+        someList()
+            .map() { ... }
+    }
 }
 ```
 
