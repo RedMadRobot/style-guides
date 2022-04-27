@@ -75,8 +75,61 @@ private val promoItem: MarkPromoItem by lazy {
 ```
 
 # Функции
-## Функции с одним выражением
-- Позволительно использовать функцию с одним выражением только в том случае, если она помещается в одну строку.
+## Функции с одним выражением (expression body)
+- Обязательно указываем типы Unit и Nothing явно.
+- Указание остальных возвращаемых типов – на усмотрение разработчика.
+- Для случаев с Unit или Nothing рекомендуется предпочесть функцию с block body. 
+- Перенос строк по правилу из гайда https://kotlinlang.org/docs/coding-conventions.html#expression-bodies. 
+- Никакого дополнительного форматирования не требуется, обычные правила.
+- Стоит понимать, что это в первую очередь функция выполняющая expression и возвращающая его результат (явное указание типов Unit и Nothing позволяет видеть когда expression body функция используется для side-effect'а и избежать ошибок выведения неверных типов).
+
+Все примеры ниже валидны:
+```kotlin
+fun expressionFun() = when(something) { 
+    // ... Value.
+}  
+
+// Оr wrapped after '='.
+fun expressionFun2() = 
+    when(something) { 
+        // ... Value.
+    } 
+
+fun expressionFun3() = if (isSomething) {
+     // ... Value.
+} else {
+     // ... Value.
+}
+
+fun expressionFun4() =
+    if (isSomething) {
+         // ... Value.
+    } else {
+         // ... Value.
+    }
+
+// Unit type must be explicit
+fun expressionFun5(): Unit = with(something) { 
+    // ... Side-effect.
+}
+
+// Unit type must be explicit
+fun expressionFun6(): Unit = 
+    with(something) { 
+        // ... Side-effect.
+    } 
+
+// Nothing type must be explicit
+fun expressionFun7(): Nothing = when(something) { 
+    // ... Never returns.
+}
+
+// Nothing type must be explicit
+fun expressionFun8(): Nothing = 
+    when(something) { 
+        // ... Never returns.
+    } 
+```
 
 ## Именованные аргументы
 - Если по контексту не понятно назначение аргумента, то следует сделать его именованным.
