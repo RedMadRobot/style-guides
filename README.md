@@ -79,7 +79,7 @@ private val promoItem: MarkPromoItem by lazy {
 - Обязательно указываем типы Unit и Nothing явно.
 - Указание остальных возвращаемых типов – на усмотрение разработчика.
 - Для случаев с Unit или Nothing рекомендуется предпочесть функцию с block body. 
-- Перенос строк по правилу из гайда https://kotlinlang.org/docs/coding-conventions.html#expression-bodies. 
+- Перенос строк [по правилу из официального гайда](https://kotlinlang.org/docs/coding-conventions.html#expression-bodies). 
 - Никакого дополнительного форматирования не требуется, обычные правила.
 - Стоит понимать, что это в первую очередь функция выполняющая expression и возвращающая его результат (явное указание типов Unit и Nothing позволяет видеть когда expression body функция используется для side-effect'а и избежать ошибок выведения неверных типов).
 
