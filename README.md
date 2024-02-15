@@ -140,18 +140,23 @@ setAdditionalArguments(arguments = null)
 
 ### Вызов переменной функционального типа
 
-Всегда использовать полный вариант с написанием `invoke` у переменной вместо использования сокращенного варианта:
+Если отсутствуют договоренности внутри проекта, допускается сокращенный вызов лямбды без `invoke`: 
 
 ```kotlin
-fun runAndCall(expression: () -> Unit): Result {
-    val result = run()
-    
-    // Bad
-    expression()
+@Composable
+fun ProfileScreenContent(
+  header: @Composable LazyItemScope.() -> Unit,
+  body: LazyListScope.() -> Unit,
+  footer: @Composable LazyItemScope.() -> Unit,
+) {
+  LazyColumn {
+    item(content = header)
     // Good
-    expression.invoke()
-    
-    return result
+    body()
+    // Optional
+    body.invoke(this@LazyColumn)
+    item(content = footer)
+  }
 }
 ```
 
