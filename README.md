@@ -37,6 +37,34 @@
 
 Пакеты именуются **одним** словом в стиле lowercase. Если необходимо использовать несколько слов, то просто склеиваем их вместе.
 
+При объявлении констант, полей или аргументов функций рекомендуется дополнительно указывать размерность, если контекст или название функции не дает однозначного понимания их назначения:
+
+```kotlin
+// Bad
+const val TIMEOUT = 1000L
+const val PADDING = 24
+
+// Bad 
+fun someFunction(timeout: Long)
+
+// Bad
+val defaultTimeout get() = ...
+
+// Good
+const val TIMEOUT_MILLIS = 1000L
+const val PADDING_DP = 24
+
+// Good
+val TIMEOUT = Duration.milliseconds(1000)
+val PADDING = 24.dp
+
+// Good
+fun preferGoodNames(timeoutMillis: Long)
+
+// Good
+val defaultTimeoutMillis get() = ...
+```
+
 ## Форматирование выражений
 
 При переносе на новую строку цепочки вызова методов символ `.` или оператор `?.` переносятся на следующую строку, property при этом разрешается оставлять на одной строке:
