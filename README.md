@@ -38,7 +38,6 @@
 Пакеты именуются **одним** словом в стиле lowercase. Если необходимо использовать несколько слов, то просто склеиваем их вместе.
 
 При объявлении констант, полей или аргументов функций рекомендуется дополнительно указывать размерность, если контекст или название функции не дает однозначного понимания их назначения:
-
 ```kotlin
 // Bad
 const val TIMEOUT = 1000L
@@ -48,21 +47,21 @@ const val PADDING = 24
 fun someFunction(timeout: Long)
 
 // Bad
-val defaultTimeout get() = ...
+val defaultTimeout get() = 1000L
 
 // Good
 const val TIMEOUT_MILLIS = 1000L
 const val PADDING_DP = 24
 
 // Good
-val TIMEOUT = Duration.milliseconds(1000)
+val TIMEOUT = 1000.milliseconds
 val PADDING = 24.dp
 
 // Good
 fun preferGoodNames(timeoutMillis: Long)
 
 // Good
-val defaultTimeoutMillis get() = ...
+val defaultTimeoutMillis get() = 1000L
 ```
 
 ## Форматирование выражений
