@@ -167,18 +167,32 @@ setAdditionalArguments(arguments = null)
 
 ### Вызов переменной функционального типа
 
-Всегда использовать полный вариант с написанием `invoke` у переменной вместо использования сокращенного варианта:
+Допускается вызов лямбды как с `invoke`, так и сокращенный вариант `()`, если отсутствуют договоренности внутри проекта. Однако явный `invoke` имеет ряд преимуществ:
+
+> [!TIP]
+> Одной из основных причин использования явного `invoke` является концептуальное разделение функции как члена класса и лямбды как входного параметра функции.
+> Используя `invoke` явно, мы показываем, что используем лямбду, а не функцию.
+> 
+> При этом дополнительным аргументом к использованию `invoke` является его заметность. Вызывая лямбду без `invoke`, у нее можно потерять скобки в месте вызова, что приведет к некорректному поведению.
 
 ```kotlin
-fun runAndCall(expression: () -> Unit): Result {
-    val result = run()
+@Composable
+fun ProfileScreenContent(
+  header: @Composable LazyItemScope.() -> Unit,
+  body: @Composable LazyListScope.() -> Unit,
+  footer: @Composable LazyItemScope.() -> Unit,
+) {
+  LazyColumn {
+    item(content = header)
     
     // Bad
-    expression()
+    body
     // Good
-    expression.invoke()
+    body()
+    body.invoke(this@LazyColumn)
     
-    return result
+    item(content = footer)
+  }
 }
 ```
 
