@@ -140,7 +140,7 @@ setAdditionalArguments(arguments = null)
 
 ### Вызов переменной функционального типа
 
-Если отсутствуют договоренности внутри проекта, допускается вызов лямбды как с `invoke`, так и сокращенный вариант `()`.
+Допускается вызов лямбды как с `invoke`, так и сокращенный вариант `()`, если отсутствуют договоренности внутри проекта. Однако явный `invoke` имеет ряд преимуществ:
 
 > [!TIP]
 > Одной из основных причин использования явного `invoke` является концептуальное разделение функции как члена класса и лямбды как входного параметра функции.
@@ -152,7 +152,7 @@ setAdditionalArguments(arguments = null)
 @Composable
 fun ProfileScreenContent(
   header: @Composable LazyItemScope.() -> Unit,
-  body: LazyListScope.() -> Unit,
+  body: @Composable LazyListScope.() -> Unit,
   footer: @Composable LazyItemScope.() -> Unit,
 ) {
   LazyColumn {
