@@ -1,6 +1,6 @@
 # Kotlin Code Style
 
-В репозитории приведен набор соглашений по оформлению кода на языке Kotlin.
+В данном документе приведен набор соглашений по оформлению кода на языке Kotlin.
 
 Этот список правил расширяет предложенные [Google](https://android.github.io/kotlin-guides/style.html) и [командой разработки Kotlin](https://kotlinlang.org/docs/reference/coding-conventions.html) гайды и пересматривает в них некоторые неоднозначные моменты.
 
