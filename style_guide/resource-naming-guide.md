@@ -21,7 +21,7 @@ constant part
 Если архитектура приложения подразумевает разделение на модули, нужно перенести переименованную иконку в соответствующий модуль.
 
 ## Правила именования
-### Animation <Badge text="accepted"/>
+### Animation ![Static Badge](https://img.shields.io/badge/accepted-green)
 
 ::: naming
 <span class="req">[what i do]</span><span class="opt">_[duration/speed/etc]</span>
@@ -31,7 +31,7 @@ constant part
 - `fade_out`
 - `slide_up`
 
-### Color <Badge text="on hold" type="warning"/>
+### Color ![Static Badge](https://img.shields.io/badge/on_hold-yellow)
 
 ::: naming
 <span class="req">[designer's color name]</span>
@@ -80,7 +80,7 @@ constant part
 - `Red_90`
 - `ShimmerPrimary`
 
-### Drawable <Badge text="accepted"/>
+### Drawable ![Static Badge](https://img.shields.io/badge/accepted-green)
 
 ::: naming
 icon/shape/image/selector_<span class="req">[what i show]</span><span class="opt">\_[size_dp]</span>
@@ -121,7 +121,7 @@ icon/shape/image/selector_<span class="req">[what i show]</span><span class="opt
 - `Settings_32`
 - `KnowledgeBaseLogo`
 
-### Layout <Badge text="accepted"/>
+### Layout ![Static Badge](https://img.shields.io/badge/accepted-green)
 
 ::: naming
 activity_<span class="req">[what i do]</span>  
@@ -165,7 +165,7 @@ view_<span class="req">[what i do]</span>
 - `AmountShimmer`
 - `WebView`
 
-### View ID <Badge text="accepted"/>
+### View ID ![Static Badge](https://img.shields.io/badge/accepted-green)
 
 ::: tip
 В параметр `[view type]` не нужно включать суффикс `_view` чтобы не захламлять название.
@@ -190,7 +190,7 @@ view_<span class="req">[what i do]</span>
 - `orders_text_screen_header`
 - `user_profile_image_avatar`
 
-### Menu <Badge text="accepted"/>
+### Menu ![Static Badge](https://img.shields.io/badge/accepted-green)
 
 ::: naming
 bottom_menu
@@ -212,7 +212,7 @@ bottom_menu
 - `chat_toolbar_menu`
 - `profile_settings_user_role_menu`
 
-### Menu item ID <Badge text="accepted"/>
+### Menu item ID ![Static Badge](https://img.shields.io/badge/accepted-green)
 
 ::: tip
 В параметр `[menu file name]` не нужно включать суффикс `_menu` чтобы не захламлять название.
@@ -226,13 +226,13 @@ bottom_menu
 - `orders_filter_by_name`
 - `chat_toolbar_call`
 
-### Raw file <Badge text="accepted"/>
+### Raw file ![Static Badge](https://img.shields.io/badge/accepted-green)
 
 ::: naming
 <span class="req">[why i need]</span>
 :::
 
-### Array <Badge text="accepted"/>
+### Array ![Static Badge](https://img.shields.io/badge/accepted-green)
 
 ::: naming
 <span class="req">[what i contain]\_[array type]</span>_array
@@ -248,7 +248,7 @@ bottom_menu
 - `role_ids_int_array`
 - `orders_delivery_variant_string_array`
 
-### Dimen <Badge text="accepted"/>
+### Dimen ![Static Badge](https://img.shields.io/badge/accepted-green)
 
 ::: naming
 <span class="opt">[view type]\_</span><span class="req">[dimen type]\_[dimen size]</span>
@@ -271,7 +271,7 @@ bottom_menu
 - `auth_button_margin_12dp`
 - `order_info_picture_height_20dp`
 
-### String <Badge text="accepted"/>
+### String ![Static Badge](https://img.shields.io/badge/accepted-green)
 
 ::: naming
 <span class="req">[what i show]\_[string type]</span>
@@ -299,7 +299,7 @@ bottom_menu
 - `orders_filter_button_title`
 - `login_password_hint`
 
-### Styles and Themes <Badge text="on hold" type="warning"/>
+### Styles and Themes ![Static Badge](https://img.shields.io/badge/on_hold-yellow)
 
 ::: naming
 Theme.<span class="req">[app name].[theme name]</span>
@@ -325,7 +325,7 @@ ShapeAppearance.<span class="req">[app name].[shape appearance name]</span>
 - `TextAppearance.Openbank.Body1`
 - `ShapeAppearance.Openbank.Small`
 
-### XML file <Badge text="accepted"/>
+### XML file ![Static Badge](https://img.shields.io/badge/accepted-green)
 
 ::: naming
 <span class="req">[why i need]</span>
@@ -334,7 +334,7 @@ ShapeAppearance.<span class="req">[app name].[shape appearance name]</span>
 Примеры:
 - `network_security_config.xml`
 
-### Font file <Badge text="on hold" type="warning"/>
+### Font file ![Static Badge](https://img.shields.io/badge/on_hold-yellow)
 
 ::: naming
 <span class="req">[designer's font name]</span>
