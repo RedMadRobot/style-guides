@@ -2,16 +2,14 @@
 
 ## Соглашения
 
-::: naming
-constant part
-<p class="note">Предопределённые части названия, которые диктуются спецификой android разработки и никогда не меняются</p>
+constant part  
+Предопределённые части названия, которые диктуются спецификой android разработки и никогда не меняются
 
-<span class="req">required part</span>
-<p class="note">Часть названия, которая задается в зависимости от условий использования</p>
+**required part**  
+Часть названия, которая задается в зависимости от условий использования
 
-<span class="opt">optional part</span>
-<p class="note">Часть, которая добавляется при необходимости что-либо уточнить</p>
-:::
+*optional part*  
+Часть, которая добавляется при необходимости что-либо уточнить
 
 ## Рефакторинг
 
@@ -23,9 +21,7 @@ constant part
 ## Правила именования
 ### Animation ![Static Badge](https://img.shields.io/badge/accepted-green)
 
-::: naming
-<span class="req">[what i do]</span><span class="opt">_[duration/speed/etc]</span>
-:::
+> **[what i do]***_[duration/speed/etc]*
 
 Примеры:
 - `fade_out`
@@ -33,16 +29,14 @@ constant part
 
 ### Color ![Static Badge](https://img.shields.io/badge/on_hold-yellow)
 
-::: naming
-<span class="req">[designer's color name]</span>
-<p class="note">Цвет из Miro или дизайн системы</p>
-
-<span class="req">[color]</span><span class="opt">\_opacity_[opacity percent]</span>
-<p class="note">Любой цвет</p>
-
-<span class="req">[color place]\_[color]</span><span class="opt">\_opacity_[opacity percent]</span>
-<p class="note">Цвет, который привязан к какому-то конкретному элементу интерфейса</p>
-:::
+> **[designer's color name]**  
+> Цвет из Miro или дизайн системы
+>
+> **[color]***\_opacity_[opacity percent]*  
+> Любой цвет
+>
+> **[color place]\_[color]***\_opacity\_[opacity percent]*  
+> Цвет, который привязан к какому-то конкретному элементу интерфейса
 
 Примеры:
 - `sme_dark_grey`
@@ -60,19 +54,17 @@ constant part
 
 Цвета именуются по аналогии с формой наименования ресурсов в `color.xml`, но с использованием `CamelCase`.
 
-::: naming
-<span class="req">[Designer's color name]</span>
-<p class="note">Цвет из Miro/Figma или дизайн системы</p>
-
-<span class="req">[Color]</span><span class="opt">\_[opacity percent]</span>
-<p class="note">Любой цвет, который также может обладать определенной прозрачностью</p>
-
-<span class="req">[Color][Dark/Light postfix]</span><span class="opt">\_[opacity percent]</span>
-<p class="note">Цвет, который встречается в более светлом/темном виде можно выделить ключевыми словами</p>
-
-<span class="req">[Color place]\[Color]</span><span class="opt">\_[opacity percent]</span>
-<p class="note">Цвет, который привязан к какому-то конкретному элементу интерфейса</p>
-:::
+> **[Designer's color name]**  
+> Цвет из Miro/Figma или дизайн системы
+>
+> **[Color]***\_[opacity percent]*  
+> Любой цвет, который также может обладать определенной прозрачностью
+>
+> **[Color][Dark/Light postfix]***\_[opacity percent]*  
+> Цвет, который встречается в более светлом/темном виде можно выделить ключевыми словами
+>
+> **[Color place]\[Color]***\_[opacity percent]*  
+> Цвет, который привязан к какому-то конкретному элементу интерфейса
 
 Примеры:
 - `Grey`
@@ -82,13 +74,11 @@ constant part
 
 ### Drawable ![Static Badge](https://img.shields.io/badge/accepted-green)
 
-::: naming
-icon/shape/image/selector_<span class="req">[what i show]</span><span class="opt">\_[size_dp]</span>
-<p class="note">Drawable-ресурс, который используется повсеместно в приложении</p>
-
-<span class="req">[feature]\_</span>icon/shape/image/selector<span class="req">\_[what i show]</span><span class="opt">\_[size_dp]</span>
-<p class="note">Drawable-ресурс, который используется только в рамках какого-то функционала</p>
-:::
+> icon/shape/image/selector_**[what i show]***_[size_dp]*  
+> Drawable-ресурс, который используется повсеместно в приложении
+>
+> **[feature]_** icon/shape/image/selector **_[what i show]***_[size_dp]*  
+> Drawable-ресурс, который используется только в рамках какого-то функционала
 
 Примеры:
 - `icon_arrow`
@@ -99,22 +89,18 @@ icon/shape/image/selector_<span class="req">[what i show]</span><span class="opt
 
 В Compose Drawable-ресурсы описываются в отдельном object.
 
-::: naming
-<span class="req">[App name][Illustration/Icon]</span>
-<p class="note">Название object в котором описываются Drawable-ресурсы</p>
-:::
+> **[App name][Illustration/Icon]**  
+> Название object в котором описываются Drawable-ресурсы
 
 Примеры:
 - `KnowledgeBaseIcon`
 - `KnowledgeBaseIllustration`
 
-::: naming
-<span class="req">[What i show]</span><span class="opt">\_[size_dp]</span>
-<p class="note">Drawable-ресурс, который используется повсеместно в приложении</p>
-
-<span class="req">[Feature]</span>icon/shape/image/selector<span class="req">[What i show]</span><span class="opt">\[size_dp]</span>
-<p class="note">Drawable-ресурс, который используется только в рамках какого-то функционала</p>
-:::
+> **[What i show]***_[size_dp]*  
+> Drawable-ресурс, который используется повсеместно в приложении
+> 
+> **[Feature]**icon/shape/image/selector**[What i show]***[size_dp]*  
+> Drawable-ресурс, который используется только в рамках какого-то функционала
 
 Примеры:
 - `Delete`
@@ -123,14 +109,12 @@ icon/shape/image/selector_<span class="req">[what i show]</span><span class="opt
 
 ### Layout ![Static Badge](https://img.shields.io/badge/accepted-green)
 
-::: naming
-activity_<span class="req">[what i do]</span>  
-fragment_<span class="req">[what i do]</span>  
-dialog_<span class="req">[what i do]</span>  
-layout_<span class="req">[what i do]</span>  
-item_<span class="req">[what i do]</span>  
-view_<span class="req">[what i do]</span>  
-:::
+> activity_**[what i do]**  
+> fragment_**[what i do]**  
+> dialog_**[what i do]**  
+> layout_**[what i do]**  
+> item_**[what i do]**  
+> view_**[what i do]**  
 
 Примеры:
 - `activity_main`
@@ -142,20 +126,16 @@ view_<span class="req">[what i do]</span>
 
 ### Layout (Compose)
 
-::: naming
-<span class="req">[what i do]</span>Screen   
-<span class="req">[what i do]</span>BottomSheet  
-<span class="req">[what i do]</span>Layout  
-<span class="req">[what i do]</span>Item   
-<span class="req">[what i do]</span>Shimmer  
-:::
+> [**What i do**]Screen  
+> [**What i do**]BottomSheet  
+> [**What i do**]Layout  
+> [**What i do**]Item  
+> [**What i do**]Shimmer
 
 Локальные и общие визуальные компоненты обычно именуются только по назначению, но в случае необходимости дополнить
 контекст или выделить их тип можно дополнить название припиской `View`.
 
-::: naming
-<span class="req">[what i do]</span>View
-:::
+> [**What i do**]View
 
 Примеры:
 - `MainScreen`
@@ -167,19 +147,16 @@ view_<span class="req">[what i do]</span>
 
 ### View ID ![Static Badge](https://img.shields.io/badge/accepted-green)
 
-::: tip
-В параметр `[view type]` не нужно включать суффикс `_view` чтобы не захламлять название.
-:::
-::: naming
-<span class="req">[what i contain]</span>_container
-<p class="note">Любой контейнер</p>
-
-<span class="req">[view type]\_[what i do]</span>
-<p class="note">View используемая повсеместно в приложении</p>
-
-<span class="req">[feature]\_[view type]\_[what i do]</span>
-<p class="note">View используемая только в рамках какого-то функционала</p>
-:::
+> В параметр `[view type]` не нужно включать суффикс `_view` чтобы не захламлять название.
+>
+> **[what i contain]**_container  
+> Любой контейнер
+> 
+> **[view type]\_[what i do]**  
+> View используемая повсеместно в приложении
+>
+> **[feature]\_[view type]\_[what i do]**  
+> View используемая только в рамках какого-то функционала
 
 Примеры:
 - `view_pin_code`
@@ -192,19 +169,17 @@ view_<span class="req">[what i do]</span>
 
 ### Menu ![Static Badge](https://img.shields.io/badge/accepted-green)
 
-::: naming
-bottom_menu
-<p class="note">Единственное на все приложение меню для "нижней" навигации</p>
-
-<span class="req">[why i need]</span>_menu
-<p class="note">Меню, которое используется по всему приложению</p>
-
-<span class="req">[feature]\_[why i need]</span>_menu
-<p class="note">Меню, которое используется только в каком-то конкретном функционале</p>
-
-<span class="req">[screen]\_[why i need]</span>_menu
-<p class="note">Меню, которое используется только на конкретном экране</p>
-:::
+> bottom_menu   
+> Единственное на все приложение меню для "нижней" навигации
+>
+> **[why i need]**_menu  
+> Меню, которое используется по всему приложению
+>
+> **[feature]\_[why i need]**_menu  
+> Меню, которое используется только в каком-то конкретном функционале
+>
+> **[screen]\_[why i need]**_menu  
+> Меню, которое используется только на конкретном экране
 
 Примеры:
 - `role_type_menu`
@@ -214,12 +189,9 @@ bottom_menu
 
 ### Menu item ID ![Static Badge](https://img.shields.io/badge/accepted-green)
 
-::: tip
-В параметр `[menu file name]` не нужно включать суффикс `_menu` чтобы не захламлять название.
-:::
-::: naming
-<span class="req">[menu file name]_[what i show]</span>
-:::
+> В параметр `[menu file name]` не нужно включать суффикс `_menu` чтобы не захламлять название.
+>
+> **[menu file name]_[what i show]**
 
 Примеры:
 - `role_type_admin`
@@ -228,19 +200,15 @@ bottom_menu
 
 ### Raw file ![Static Badge](https://img.shields.io/badge/accepted-green)
 
-::: naming
-<span class="req">[why i need]</span>
-:::
+> **[why i need]**
 
 ### Array ![Static Badge](https://img.shields.io/badge/accepted-green)
 
-::: naming
-<span class="req">[what i contain]\_[array type]</span>_array
-<p class="note">Массив элементов, который используется по всему приложению</p>
-
-<span class="req">[feature]\_[what i contain]\_[array type]</span>_array
-<p class="note">Массив элементов, который используется в каком-то конкретном функционале</p>
-:::
+> **[what i contain]\_[array type]**_array  
+> Массив элементов, который используется по всему приложению
+> 
+> **[feature]\_[what i contain]\_[array type]**_array  
+> Массив элементов, который используется в каком-то конкретном функционале
 
 Примеры:
 - `months_string_array`
@@ -250,21 +218,17 @@ bottom_menu
 
 ### Dimen ![Static Badge](https://img.shields.io/badge/accepted-green)
 
-::: naming
-<span class="opt">[view type]\_</span><span class="req">[dimen type]\_[dimen size]</span>
-<p class="note">Размер который используется по всему приложению</p>
+> *[view type]\_***[dimen type]\_[dimen size]**  
+> Размер который используется по всему приложению
+> 
+> **[feature]***\_[view type]***\_[dimen type]\_[dimen size]**  
+> Размер, который используется только в каком-то конкретном функционале
+> 
+> **[screen]***\_[view type]***\_[dimen type]\_[dimen size]**  
+> Размер, который используется только на каком-то конкретном экране
 
-<span class="req">[feature]</span><span class="opt">\_[view type]</span><span class="req">\_[dimen type]\_[dimen size]</span>
-<p class="note">Размер, который используется только в каком-то конкретном функционале</p>
-
-<span class="req">[screen]</span><span class="opt">\_[view type]</span><span class="req">\_[dimen type]\_[dimen size]</span>
-<p class="note">Размер, который используется только на каком-то конкретном экране</p>
-:::
-
-::: tip
-`[dimen type]` может содержать как общий тип вроде `margin` или `padding`, так и более уточнённый `margin_top`.
-Можно использовать суффиксы `_vertical` и `_horizontal` для описания сразу двух отступов.
-:::
+> `[dimen type]` может содержать как общий тип вроде `margin` или `padding`, так и более уточнённый `margin_top`.
+> Можно использовать суффиксы `_vertical` и `_horizontal` для описания сразу двух отступов.
 
 Примеры:
 - `button_margin_8dp`
@@ -273,16 +237,14 @@ bottom_menu
 
 ### String ![Static Badge](https://img.shields.io/badge/accepted-green)
 
-::: naming
-<span class="req">[what i show]\_[string type]</span>
-<p class="note">Строка, которая используется по всему приложению</p>
-
-<span class="req">[feature]\_[what i show/where i am]\_[string type]</span>
-<p class="note">Строка, которая используется в каком-то конкретном функционале</p>
-
-<span class="req">[screen]\_[what i show/where i am]\_[string type]</span>
-<p class="note">Строка, которая используется на каком-то конкретном экране</p>
-:::
+> **[what i show]\_[string type]**  
+> Строка, которая используется по всему приложению
+>
+> **[feature]\_[what i show/where i am]\_[string type]**  
+> Строка, которая используется в каком-то конкретном функционале
+> 
+> **[screen]\_[what i show/where i am]\_[string type]**  
+> Строка, которая используется на каком-то конкретном экране
 
 `[string type]` может принимать следующие значения:
 - *title* - метки, заголовки кнопок и полей
@@ -301,22 +263,20 @@ bottom_menu
 
 ### Styles and Themes ![Static Badge](https://img.shields.io/badge/on_hold-yellow)
 
-::: naming
-Theme.<span class="req">[app name].[theme name]</span>
-<p class="note">Тема</p>
-
-ThemeOverlay.<span class="req">[app name].[theme overlay name]</span>
-<p class="note">Тема, которая определяет только некоторые атрибуты и применяется поверх активной темы</p>
-
-Widget.<span class="req">[app name].[widget name]</span><span class="opt">.[style name]</span>
-<p class="note">Стиль виджета</p>
-
-TextAppearance.<span class="req">[app name].[text appearance name]</span>
-<p class="note">Стиль текста</p>
-
-ShapeAppearance.<span class="req">[app name].[shape appearance name]</span>
-<p class="note">Стиль фигур</p>
-:::
+> Theme.**[app name].[theme name]**  
+> Тема
+>
+> ThemeOverlay.**[app name].[theme overlay name]**  
+> Тема, которая определяет только некоторые атрибуты и применяется поверх активной темы
+>
+> Widget.**[app name].[widget name]***.[style name]*  
+> Стиль виджета
+>
+> TextAppearance.**[app name].[text appearance name]**  
+> Стиль текста
+>
+> ShapeAppearance.**[app name].[shape appearance name]**  
+> Стиль фигур
 
 Примеры:
 - `Theme.Openbank.TranslucentStatus`
@@ -327,19 +287,15 @@ ShapeAppearance.<span class="req">[app name].[shape appearance name]</span>
 
 ### XML file ![Static Badge](https://img.shields.io/badge/accepted-green)
 
-::: naming
-<span class="req">[why i need]</span>
-:::
+> **[why i need]**
 
 Примеры:
 - `network_security_config.xml`
 
 ### Font file ![Static Badge](https://img.shields.io/badge/on_hold-yellow)
 
-::: naming
-<span class="req">[designer's font name]</span>
-<p class="note">Стандартное имя шрифта или имя придуманное дизайнерами</p>
-:::
+> **[designer's font name]**  
+> Стандартное имя шрифта или имя придуманное дизайнерами
 
 ## FAQ
 
