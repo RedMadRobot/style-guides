@@ -19,7 +19,7 @@ constant part
 Если архитектура приложения подразумевает разделение на модули, нужно перенести переименованную иконку в соответствующий модуль.
 
 ## Правила именования
-### Animation ![Static Badge](https://img.shields.io/badge/accepted-green)
+### Animation ![Accepted](https://img.shields.io/badge/accepted-green?style=for-the-badge)
 
 > **[what i do]***_[duration/speed/etc]*
 
@@ -27,7 +27,7 @@ constant part
 - `fade_out`
 - `slide_up`
 
-### Color ![Static Badge](https://img.shields.io/badge/on_hold-yellow)
+### Color ![On Hold](https://img.shields.io/badge/on_hold-yellow?style=for-the-badge)
 
 > **[designer's color name]**  
 > Цвет из Miro или дизайн системы
@@ -72,7 +72,7 @@ constant part
 - `Red_90`
 - `ShimmerPrimary`
 
-### Drawable ![Static Badge](https://img.shields.io/badge/accepted-green)
+### Drawable ![Accepted](https://img.shields.io/badge/accepted-green?style=for-the-badge)
 
 > icon/shape/image/selector_**[what i show]***_[size_dp]*  
 > Drawable-ресурс, который используется повсеместно в приложении
@@ -107,7 +107,7 @@ constant part
 - `Settings_32`
 - `KnowledgeBaseLogo`
 
-### Layout ![Static Badge](https://img.shields.io/badge/accepted-green)
+### Layout ![Accepted](https://img.shields.io/badge/accepted-green?style=for-the-badge)
 
 > activity_**[what i do]**  
 > fragment_**[what i do]**  
@@ -145,7 +145,7 @@ constant part
 - `AmountShimmer`
 - `WebView`
 
-### View ID ![Static Badge](https://img.shields.io/badge/accepted-green)
+### View ID ![Accepted](https://img.shields.io/badge/accepted-green?style=for-the-badge)
 
 > В параметр `[view type]` не нужно включать суффикс `_view` чтобы не захламлять название.
 >
@@ -167,7 +167,7 @@ constant part
 - `orders_text_screen_header`
 - `user_profile_image_avatar`
 
-### Menu ![Static Badge](https://img.shields.io/badge/accepted-green)
+### Menu ![Accepted](https://img.shields.io/badge/accepted-green?style=for-the-badge)
 
 > bottom_menu   
 > Единственное на все приложение меню для "нижней" навигации
@@ -187,7 +187,7 @@ constant part
 - `chat_toolbar_menu`
 - `profile_settings_user_role_menu`
 
-### Menu item ID ![Static Badge](https://img.shields.io/badge/accepted-green)
+### Menu item ID ![Accepted](https://img.shields.io/badge/accepted-green?style=for-the-badge)
 
 > В параметр `[menu file name]` не нужно включать суффикс `_menu` чтобы не захламлять название.
 >
@@ -198,11 +198,11 @@ constant part
 - `orders_filter_by_name`
 - `chat_toolbar_call`
 
-### Raw file ![Static Badge](https://img.shields.io/badge/accepted-green)
+### Raw file ![Accepted](https://img.shields.io/badge/accepted-green?style=for-the-badge)
 
 > **[why i need]**
 
-### Array ![Static Badge](https://img.shields.io/badge/accepted-green)
+### Array ![Accepted](https://img.shields.io/badge/accepted-green?style=for-the-badge)
 
 > **[what i contain]\_[array type]**_array  
 > Массив элементов, который используется по всему приложению
@@ -216,7 +216,7 @@ constant part
 - `role_ids_int_array`
 - `orders_delivery_variant_string_array`
 
-### Dimen ![Static Badge](https://img.shields.io/badge/accepted-green)
+### Dimen ![Accepted](https://img.shields.io/badge/accepted-green?style=for-the-badge)
 
 > *[view type]\_***[dimen type]\_[dimen size]**  
 > Размер который используется по всему приложению
@@ -235,7 +235,7 @@ constant part
 - `auth_button_margin_12dp`
 - `order_info_picture_height_20dp`
 
-### String ![Static Badge](https://img.shields.io/badge/accepted-green)
+### String ![Accepted](https://img.shields.io/badge/accepted-green?style=for-the-badge)
 
 > **[what i show]\_[string type]**  
 > Строка, которая используется по всему приложению
@@ -261,7 +261,7 @@ constant part
 - `orders_filter_button_title`
 - `login_password_hint`
 
-### Styles and Themes ![Static Badge](https://img.shields.io/badge/on_hold-yellow)
+### Styles and Themes ![On Hold](https://img.shields.io/badge/on_hold-yellow?style=for-the-badge)
 
 > Theme.**[app name].[theme name]**  
 > Тема
@@ -285,14 +285,14 @@ constant part
 - `TextAppearance.Openbank.Body1`
 - `ShapeAppearance.Openbank.Small`
 
-### XML file ![Static Badge](https://img.shields.io/badge/accepted-green)
+### XML file ![Accepted](https://img.shields.io/badge/accepted-green?style=for-the-badge)
 
 > **[why i need]**
 
 Примеры:
 - `network_security_config.xml`
 
-### Font file ![Static Badge](https://img.shields.io/badge/on_hold-yellow)
+### Font file ![On Hold](https://img.shields.io/badge/on_hold-yellow?style=for-the-badge)
 
 > **[designer's font name]**  
 > Стандартное имя шрифта или имя придуманное дизайнерами
